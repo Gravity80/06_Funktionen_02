@@ -13,14 +13,13 @@ output(divide(2,4));
 output(divide(2,-3));
 output(divide(2,0));
 output(divide(0,2));
-
 function divide(a,b) {
 
     if (b == 0) {
         return "Division by 0 not possible!";
-    } else {
-        return a / b; 
-    }
+    } 
+    
+    return a / b; 
 
 }
 
