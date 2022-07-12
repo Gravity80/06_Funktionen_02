@@ -101,8 +101,11 @@ function add(a,b) {
 // output("hello");
 // output(20);
  function output(inputData) {
-    console.log(inputData);
- }
+    
+        console.log("The result is: " + inputData);
+   
+    }
+    
 
  // TO DO:
  // output(20) ---> "The result is: "  20
