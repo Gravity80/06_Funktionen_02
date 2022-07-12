@@ -8,15 +8,46 @@
 4. Ausgabe in Konsole :check!
 */
 
+/*** Rechner */
+/*
+0. a+b / a-b/ a*b / a/b  // ergebnis c 
+1. Dateneingabe + -überprüfung :
+2. Auswahl Rechenart : check!
+3. Fkt. Grundrechenarten : check!
+4. Ausgabe in Konsole :check!
+*/
+
+// application / App
+startApp();
+function startApp() {
+    output(calculator(getNumber("1"),getOp(),getNumber("2")));
+}
+
+
+function getNumber(numTxt) {
+    const displayStr = "Bitte Zahl " + numTxt + " eingeben:";
+    let inputStr = prompt(displayStr);
+    let num = parseInt(inputStr);
+    return num;
+}
+
+
+function getOp() {
+    const displayStr = "Bitte korrekten Operator (+ | - | * | :) eingeben";
+    let op = prompt(displayStr);
+    return op;
+}
+
+
 // module: calculator | tests:
 // agreement : "+","-","*",":"
-output(calculator(2,2,"+"));
-output(calculator(2,2,"-"));
-output(calculator(2,2,"*"));
-output(calculator(2,2,":"));
-output(calculator(2,0,":"));
-output(calculator(2,0,"#!"));
-function calculator(a,b,op) {
+// output(calculator(2,2,"+"));
+// output(calculator(2,2,"-"));
+// output(calculator(2,2,"*"));
+// output(calculator(2,2,":"));
+// output(calculator(2,0,":"));
+// output(calculator(2,0,"#!"));
+function calculator(a,op,b) {
     switch (op) {
         case "+": // addition
             return add(a,b);
@@ -30,8 +61,6 @@ function calculator(a,b,op) {
             return "Something went wrong!";
     }
 }
-
-
 
 // module: division a / b |  test:
 // output(divide(2,4));
@@ -75,3 +104,7 @@ function add(a,b) {
  function output(inputData) {
     console.log(inputData);
  }
+
+ // TO DO:
+ // output(20) ---> "The result is: "  20
+ // output("Error") --> "Error"
