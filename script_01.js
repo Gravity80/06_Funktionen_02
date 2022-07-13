@@ -7,15 +7,6 @@
 4. Ausgabe in Konsole :check!
 */
 
-/*** Rechner */
-/*
-0. a+b / a-b/ a*b / a/b  // ergebnis c 
-1. Dateneingabe + -überprüfung :
-2. Auswahl Rechenart : check!
-3. Fkt. Grundrechenarten : check!
-4. Ausgabe in Konsole :check!
-*/
-
 // application / App
 startApp();
 function startApp() {
@@ -101,12 +92,9 @@ function add(a,b) {
 // output("hello");
 // output(20);
  function output(inputData) {
-    
+    if (typeof inputData == "number") {
         console.log("The result is: " + inputData);
-   
+    } else {
+        console.log("ERROR: " + inputData);
     }
-    
-
- // TO DO:
- // output(20) ---> "The result is: "  20
- // output("Error") --> "Error"
+ }
