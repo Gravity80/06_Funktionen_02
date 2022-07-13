@@ -8,7 +8,7 @@
 */
 
 // application / App
-startApp();
+// startApp();
 function startApp() {
     output(calculator(getNumber("1"),getOp(),getNumber("2")));
 }
@@ -22,10 +22,35 @@ function getNumber(numTxt) {
 }
 
 
+// module: input operator | Test:
+// output(getOp());
 function getOp() {
     const displayStr = "Bitte korrekten Operator (+ | - | * | :) eingeben";
-    let op = prompt(displayStr);
+    let op = prompt(displayStr); // ???
+    return isOpValid();
     return op;
+}
+
+// module: check operator | Test:
+// agreement : "+","-","*",":"
+output(isOpValid("+"));
+output(isOpValid("-"));
+output(isOpValid("*"));
+output(isOpValid(":"));
+output(isOpValid("#?#"));
+output(isOpValid(""));
+function isOpValid(op) {
+
+    switch (op) {
+        case "+":
+        case "-":
+        case "*":
+        case ":":
+            return true;
+        default:
+            return false;
+    }
+
 }
 
 
