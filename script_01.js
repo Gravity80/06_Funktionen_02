@@ -23,12 +23,19 @@ function getNumber(numTxt) {
 
 
 // module: input operator | Test:
-// output(getOp());
+output(getOp());
 function getOp() {
+
     const displayStr = "Bitte korrekten Operator (+ | - | * | :) eingeben";
-    let op = prompt(displayStr); // ???
-    return isOpValid();
+    let op = prompt(displayStr); 
+
+    // if op is NOT valid AND user DIDN'T click at Abbrechen
+    while (!isOpValid(op) && (op !== null)) {
+        op = prompt(displayStr);
+    }
+
     return op;
+
 }
 
 // module: check operator | Test:
